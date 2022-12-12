@@ -1,0 +1,124 @@
+* {
+  background-color: rgb(179, 179, 230);
+  font-family: "Montserrat";
+  color: rgb(2, 2, 2);
+}
+
+#container {
+  max-width: 900px;
+  margin: 0px auto;
+}
+
+.header {
+  display: flex;
+}
+.header__photo img {
+  border-radius: 50%;
+}
+.header__info {
+  margin-left: 1em;
+}
+
+h1 {
+  color: rgb(101, 117, 51);
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: rgb(2, 2, 2);
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  color: rgb(101, 117, 51);
+}
+
+a {
+  color: rgb(101, 117, 51);
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+.cv {
+  max-width: 900px;
+  min-width: 660px;
+  margin: 0 auto;
+}
+
+.contacts {
+  margin-bottom: 2em;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+.contact__type {
+  min-width: 100px;
+}
+.contact__item {
+  display: flex;
+}
+
+p {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.experience {
+  display: flex;
+  margin-bottom: 2em;
+}
+.experience__date {
+  min-width: 185px;
+  margin-bottom: 1em;
+}
+.experience__name {
+  font-weight: bold;
+}
+
+.education {
+  display: flex;
+  margin-bottom: 2em;
+}
+.education__date {
+  min-width: 185px;
+  margin-bottom: 1em;
+}
+.education__name {
+  font-weight: bold;
+}
+
+.languages {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer a img {
+  width: 40px;
+}
+.footer__school a img {
+  width: 100px;
+  height: 40px;
+}
+.footer__year {
+  opacity: 0.5;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+@media (max-width: 575px) {
+  .experience {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
