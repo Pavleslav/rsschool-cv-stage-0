@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/svg-inject.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap"
       rel="stylesheet"
@@ -16,44 +17,77 @@
       <section class="about">
         <header class="header">
           <div class="header__photo">
-            <a href="https://github.com/Pavleslav" target="_blank"> <img src="myPhoto.png" alt="" class="round" /></a>
+            <a href="https://github.com/Pavleslav" target="_blank">
+              <img src="myPhoto.png" alt="" class="round"
+            /></a>
           </div>
         </header>
         <section class="contacts">
-          <h3 class="contacts__text">contact me</h3>
           <div class="underlined"></div>
-          <div class="contact__item">
-            <div class="contact__type">Github</div>
-            <div class="contact__value">
-              <a href="https://github.com/Pavleslav">Github.com/Pavleslav </a>
-            </div>
-          </div>
-          <div class="contact__item">
-            <div class="contact__type">Email</div>
-            <div class="contact__value">
-              <a href="mailto:dragrais23@gmail.com">dragrais23@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact__item">
-            <div class="contact__type">Location</div>
-            <div class="contact__value">
-              <p>Minsk, Belarus</p>
-            </div>
-          </div>
+          <nav class="nav">
+            <ul class="contact__type">
+              <a
+                href="https://discord.com/users/790963011484909599"
+                target="_blank"
+                class="contact__link"
+              >
+                <img src="discord.svg" class="injectable" />
+                <li class="link">XXXTILTACION#9956</li>
+              </a>
+            </ul>
+            <ul class="contact__type">
+              <a
+                href="https://github.com/Pavleslav"
+                target="_blank"
+                class="contact__link"
+              >
+                <img src="github.svg" class="injectable" />
+                <li class="link">Github.com/Pavleslav</li>
+              </a>
+            </ul>
+            <ul class="contact__type">
+              <a href="mailto:dragrais23@gmail.com" target="_blank" class="contact__link">
+                <img src="at-solid.svg" class="injectable" />
+                <li class="link">dragrais23@gmail.com</li>
+              </a>
+            </ul>
+            <ul class="contact__type">
+              <a
+                href="https://www.google.com/maps/d/u/0/viewer?mid=1oXs9AmiPcUoKClx8wjg_O6DMFug&hl=ru&ll=53.90225200000003%2C27.562044999999994&z=17"
+                target="_blank"
+                class="contact__link"
+              >
+                <img src="location-dot-solid.svg" class="injectable" />
+                <li class="link">Minsk, Belarus</li>
+              </a>
+            </ul>
+          </nav>
         </section>
         <section>
           <h3 class="contact_text">Skills</h3>
           <div class="underlined"></div>
           <ul class="skill_list">
-            <li>HTML5</li>
-            <li>JavaScript</li>
-            <li>Git</li>
+            <img src="html5.svg" class="injectable" />
+            <li class="skill_link">HTML5</li>
+          </ul>
+          <ul class="skill_list">
+            <img src="css.svg" class="injectable" />
+            <li class="skill_link">Css</li>
+          </ul>
+          <ul class="skill_list">
+            <img src="github.svg" class="injectable" />
+            <li class="skill_link">Git</li>
+          </ul>
+          <ul class="skill_list">
+            <img src="javascript-logo.svg" class="injectable" />
+            <li class="skill_link">JavaScript</li>
           </ul>
         </section>
       </section>
       <section class="about-me">
         <h1>Pavel Dzehtsiarenka</h1>
         <h2>Student of Rolling Scopes School</h2>
+        <h2>System administrator</h2>
         <section class="info">
           <div class="description">I'm wanna be a web developer</div>
         </section>
@@ -64,10 +98,27 @@
         <section class="education">
           <h3>Education</h3>
           <div class="description">
-            <div class="education__date">05.12.2222 - present</div>
+            <div class="date">01.09.2016 - 25.07.2021</div>
+            <div class="description__details">
+              <div class="education__name">Electrical Engineer</div>
+              <div class="education_company">
+                <a href="https://bsut.by" target="_blank" class="text">
+                  <img class="bsut_logo" src="favicon.ico" alt="Error"/>
+                  elarusian State University of Transport
+                </a>
+              </div>
+              <div class="education__details"></div>
+            </div>
+          </div>
+          <div class="description">
+            <div class="date">05.12.2022 - present</div>
             <div class="description__details">
               <div class="education__name">Web developer</div>
-              <div class="education_company">The Rolling Scopes School</div>
+              <div class="education_company">
+                <a href="https://rs.school/js/" target="_blank" class="text">
+                  <img class="Rs_logo" src="favicon-16x16.png" alt="Error"/>
+                The Rolling Scopes School</a>
+              </div>
               <div class="education__details"></div>
             </div>
           </div>
@@ -75,12 +126,30 @@
         <section class="experience">
           <h3>Experience</h3>
           <div class="description">
-            <div class="experience__date">02.08.2021 - present</div>
+            <div class="date">02.08.2021 - present</div>
             <div class="description__details">
-              <div class="experience__name">System administrator</div>
-              <div class="experience_company">Main settlement information center of Belarusian railway</div>
-              <div class="experience__details">
+              <div class="experience_company">
+                Main settlement information center of Belarusian railway
               </div>
+              <div class="experience__details"></div>
+            </div>
+          </div>
+        </section>
+        <section class="project">
+          <h3>Projects</h3>
+          <div class="description">
+            <div class="date">02.08.2021 - present</div>
+            <div class="description__details">
+              <div class="project__name">curriculum vitae</div>
+              <div class="project_company">
+                <a
+                  href="https://pavleslav.github.io/rsschool-cv/"
+                  target="_blank"
+                  class="text"
+                  ><img class="cv_logo" src="curriculum-vitae-svgrepo-com.svg" alt="Error"/>My CV</a
+                >
+              </div>
+              <div class="project__details"></div>
             </div>
           </div>
         </section>
@@ -93,17 +162,28 @@
             </ul>
           </div>
         </section>
+        <pre class="code">                            
+          <code>
+          <span class="violet">function </span><span class="orange">multiply</span><span class="white">(</span><span class="orange">a, b</span><span class="white">){</span>
+                  <span class="violet">return</span> <span class="blue">a</span><span class="white"> * </span><span class="blue">b</span>
+                  <span class="white">}</span>
+      </code>
+    </pre>
+
         <footer class="footer">
           <div class="github__logo">
-            <a href="https://github.com/Pavleslav" target="_blank"> <img src="githublogo.png" alt="Error" /></a>
+            <a href="https://github.com/Pavleslav" target="_blank">
+              <img src="githublogo.png" alt="Error"
+            /></a>
           </div>
           <div class="footer__school">
-            <a href="https://app.rs.school/profile" target="_blank"><img src="rslogo.png" alt="Error" /></a>
+            <a href="https://rs.school/js/" target="_blank"
+              ><img src="rslogo.png" alt="Error"
+            /></a>
           </div>
           <div class="footer__year"><p>2022</p></div>
         </footer>
       </section>
     </main>
-    
   </body>
 </html>
