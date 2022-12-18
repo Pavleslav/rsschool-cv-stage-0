@@ -19,10 +19,7 @@ body {
   -moz-box-shadow: 1px 81px 100px 5px rgba(0, 0, 0, 0.49);
   box-shadow: 1px 81px 100px 5px rgb(0 0 0 / 49%);
 }
-.contacts__text {
-  text-transform: uppercase;
-  font-size: 24px;
-}
+
 .underlined {
   width: 100%;
   height: 0.05rem;
@@ -30,6 +27,12 @@ body {
   margin-bottom: 1rem;
   background-color: white;
 }
+
+.contacts__text {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
 .underlined-grey {
   width: 100%;
   height: 0.05rem;
@@ -181,15 +184,15 @@ p {
     font-weight: bold;
   }
 }
-.cv_logo{
+.cv_logo {
   width: 22px;
   height: 22px;
 }
-.bsut_logo{
+.bsut_logo {
   width: 22px;
   height: 22px;
 }
-.rs_logo{
+.rs_logo {
   width: 22px;
   height: 22px;
 }
@@ -244,21 +247,20 @@ ul.contact__type {
   display: flex;
   margin-bottom: 1rem;
 }
-.code{
-
+.code {
   background-color: #4d4d4d;
-.violet {
-  color: #b294bb;
-}
-.orange {
-  color: rgb(255, 153, 0);
-}
-.blue {
-  color: #89b6c5;
-}
-.white{
-  color: #ffffff;
-}
+  .violet {
+    color: #b294bb;
+  }
+  .orange {
+    color: rgb(255, 153, 0);
+  }
+  .blue {
+    color: #89b6c5;
+  }
+  .white {
+    color: #ffffff;
+  }
 }
 
 pre {

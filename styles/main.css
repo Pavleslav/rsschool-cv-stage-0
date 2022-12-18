@@ -21,17 +21,17 @@ body {
   box-shadow: 1px 81px 100px 5px rgba(0, 0, 0, 0.49);
 }
 
-.contacts__text {
-  text-transform: uppercase;
-  font-size: 24px;
-}
-
 .underlined {
   width: 100%;
   height: 0.05rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   background-color: white;
+}
+
+.contacts__text {
+  text-transform: uppercase;
+  font-size: 24px;
 }
 
 .underlined-grey {
