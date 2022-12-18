@@ -1,19 +1,34 @@
-#Pavel Dzehtsiarenka
 
-##Contacts. discord:XXXTILTACION#9956
+# Pavel Dzehtsiarenka
 
-github:Github.com/Pavleslav
+## Contacts:
 
-mail:dragrais23@gmail.com
+- discord - XXXTILTACION#9956
+- [GitHub Profile](https://Github.com/Pavleslav "GitHub Profile")
+- Mail- dragrais23@gmail.com
 
-##Info. I'm wanna be a web developer
+## Info:
+I'm wanna be a web developer
 
-##skills. HTML5,Css,Git,JavaScript
+## Skills:
+- HTML5
+- Css
+- Git
+- JavaScript
 
-##Code-example. Console.log(1)
+## Code-example:
+```
+function multiply(a, b){
+    return a*b
+}
+```
+## Experience
+ - [Project CV](https://pavleslav.github.io/rsschool-cv/ "Cv link")
 
-##Experience. https://pavleslav.github.io/rsschool-cv/
+## Education:
+ - Belarusian State University of Transport. Electrical Engineer
+ - Rolling Scopes School Front-end Course - Stage#0
 
-##Education. Belarusian State University of Transport. Electrical Engineer
-
-##Languages. English-B1. Russian - Native
+## Languages: 
+- English-B1
+- Russian - Native
