@@ -1,67 +1,177 @@
 * {
-  background-color: rgb(179, 179, 230);
   font-family: "Montserrat";
-  color: rgb(2, 2, 2);
+  box-sizing: border-box;
 }
 
-#container {
-  max-width: 900px;
-  margin: 0px auto;
+section {
+  display: block;
+}
+
+body {
+  max-width: 1024px;
+  min-width: 600px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  padding: 2rem;
+  background-color: #7c786a;
+}
+
+.descriptions {
+  font-size: 15px;
+  line-height: 1.5;
+  display: block;
+}
+
+.main {
+  display: flex;
+  box-shadow: 1px 81px 100px 5px rgba(0, 0, 0, 0.49);
+}
+
+.underlined {
+  width: 100%;
+  height: 0.05rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+.contacts__text {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.underlined-grey {
+  width: 100%;
+  height: 0.05rem;
+  margin-top: 0.5rem;
+  background-color: grey;
+  margin-bottom: 5rem;
+}
+
+.text {
+  -webkit-transition: 0.5s ease; /* Safari and Chrome */
+  -moz-transition: 0.5s ease; /* Firefox 4 */
+  -o-transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.text:hover {
+  transition: 0.3s all ease-in-out;
+  transform: translate(10px, 0px);
+  text-decoration: underline;
+}
+
+div {
+  display: block;
+}
+
+.about {
+  padding: 1rem;
+  color: white;
+  background-color: #4d4d4d;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.about-me {
+  width: 75%;
+  padding: 1rem;
+  color: #4d4d4d;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h5 {
+  display: block;
+  font-size: 0.83em;
+  -webkit-margin-before: 1.67em;
+          margin-block-start: 1.67em;
+  -webkit-margin-after: 1.67em;
+          margin-block-end: 1.67em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.skills_list {
+  margin-bottom: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+article {
+  display: block;
 }
 
 .header {
+  margin-bottom: 20px;
   display: flex;
 }
 .header__photo img {
   border-radius: 50%;
+  display: flex;
 }
 .header__info {
   margin-left: 1em;
 }
 
-h1 {
-  color: rgb(101, 117, 51);
-  margin-bottom: 0.5em;
+.header__photo:hover img {
+  transform: scale(1.05);
+}
+
+.header__photo {
+  border-radius: 50%;
+  padding: 10px;
+  background-size: cover;
+}
+
+.round {
+  border: 5px solid rgba(184, 72, 72, 0.2);
+  transition: transform 0.3s linear;
 }
 
 h2 {
-  color: rgb(2, 2, 2);
-  font-size: 1em;
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  display: block;
+  font-size: 1.5em;
+  -webkit-margin-before: 0.83em;
+          margin-block-start: 0.83em;
+  -webkit-margin-after: 0.83em;
+          margin-block-end: 0.83em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  font-weight: bold;
 }
 
-h3 {
-  color: rgb(101, 117, 51);
-}
-
-a {
-  color: rgb(101, 117, 51);
-}
-
-section {
-  margin-bottom: 3em;
-}
-
-.cv {
-  max-width: 900px;
-  min-width: 660px;
-  margin: 0 auto;
-}
-
-.contacts {
-  margin-bottom: 2em;
-}
-
-.contact {
+.education_description {
+  padding: 10px;
+  width: 75%;
   display: flex;
-  flex-direction: column;
+  font-size: 15px;
+  line-height: 1.5;
+  border-top: solid grey 1px;
 }
-.contact__type {
-  min-width: 100px;
-}
-.contact__item {
+
+.description {
+  padding: 10px;
   display: flex;
+  font-size: 15px;
+  line-height: 1.5;
+  border-top: solid grey 1px;
 }
 
 p {
@@ -70,28 +180,14 @@ p {
   padding: 0;
 }
 
-.experience {
-  display: flex;
-  margin-bottom: 2em;
-}
-.experience__date {
-  min-width: 185px;
-  margin-bottom: 1em;
-}
-.experience__name {
-  font-weight: bold;
+.description__details {
+  display: block;
+  width: 75%;
+  padding-left: 10px;
 }
 
-.education {
-  display: flex;
-  margin-bottom: 2em;
-}
-.education__date {
-  min-width: 185px;
-  margin-bottom: 1em;
-}
-.education__name {
-  font-weight: bold;
+.date {
+  width: 35%;
 }
 
 .languages {
@@ -101,7 +197,10 @@ p {
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px 0px 0px 0px;
 }
 .footer a img {
   width: 40px;
@@ -117,8 +216,137 @@ p {
   font-weight: bold;
 }
 
+.cv_logo {
+  width: 22px;
+  height: 22px;
+}
+
+.bsut_logo {
+  width: 22px;
+  height: 22px;
+}
+
+.rs_logo {
+  width: 22px;
+  height: 22px;
+}
+
+.contact__link {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact_list {
+  display: flex;
+  align-items: center;
+}
+
+.skills {
+  display: block;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.skill_type {
+  display: flex;
+  align-items: center;
+}
+
+img.injectable {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+}
+
+.contact__type {
+  display: block;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+}
+
+.skill_link {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  -webkit-transition: 0.5s ease; /* Safari and Chrome */
+  -moz-transition: 0.5s ease; /* Firefox 4 */
+  -o-transition: 0.5s ease;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.link:hover {
+  transition: 0.3s all ease-in-out;
+  transform: translate(10px, 0px);
+}
+
+ul.contact__type {
+  padding: 0;
+  list-style-type: none;
+}
+
+.skill_list {
+  padding: 0;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.code {
+  background-color: #4d4d4d;
+}
+.code .violet {
+  color: #b294bb;
+}
+.code .orange {
+  color: rgb(255, 153, 0);
+}
+.code .blue {
+  color: #89b6c5;
+}
+.code .white {
+  color: #ffffff;
+}
+
+pre {
+  text-align: left;
+}
+
+pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0px;
+}
+
 @media (max-width: 575px) {
   .experience {
     display: block;
+  }
+}
+@media screen and (min-width: 520px) {
+  pre {
+    margin: 0 auto;
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
