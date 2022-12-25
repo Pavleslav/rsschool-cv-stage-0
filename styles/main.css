@@ -232,6 +232,7 @@ p {
 }
 
 img.injectable {
+  display: flex;
   width: 32px;
   height: 32px;
   fill: #ffffff;
