@@ -11,9 +11,13 @@ body {
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   padding: 2rem;
-  background-color: #e6e2d4;
+  background-color: #7c786a;
 }
-
+.descriptions{
+  font-size: 15px;
+  line-height: 1.5;
+  display: block;
+}
 .main {
   display: flex;
   -webkit-box-shadow: 1px 81px 100px 5px rgb(0 0 0 / 49%);
