@@ -231,6 +231,22 @@ p {
   text-decoration: none;
 }
 
+.contact_list {
+  display: flex;
+  align-items: center;
+}
+
+.skills {
+  display: block;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.skill_type {
+  display: flex;
+  align-items: center;
+}
+
 img.injectable {
   display: flex;
   width: 32px;
@@ -239,8 +255,9 @@ img.injectable {
 }
 
 .contact__type {
-  display: flex;
+  display: block;
   margin-bottom: 1rem;
+  align-items: center;
 }
 
 ul {
