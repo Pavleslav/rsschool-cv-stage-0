@@ -1,0 +1,569 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* inika-regular - latin */
+@font-face {
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/inika-v21-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/inika-v21-latin-regular.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/inter-v12-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/inter-v12-latin-regular.woff")
+      format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-700 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/inter-v12-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url("../fonts/inter-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root{
+  --main-color:#636060;
+  --green-color: #499a18;
+  --ligthgreen-color: #edf2ec;
+  --orange-color: #e06733;
+}
+
+body {
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main-color);
+}
+
+//Header start//
+.header {
+  padding: 42px 0 42px 0;
+  background-color: var(--ligthgreen-color);
+}
+.wrapper {
+  max-width: 1222px;
+  margin: 0 auto;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+.header__item {
+  margin-right: 46px;
+}
+
+.header__item:last-child {
+  margin-right: 0;
+}
+
+.header__logo-link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+}
+.header__link {
+  font-size: 16px;
+  line-height: 50px;
+  color: #010201;
+  text-decoration: none;
+}
+.header__link:hover,
+.header__link:focus,
+.header__link:active {
+  font-weight: 700;
+  color: var(--orange-color);
+}
+//Header end//
+
+//welcome start//
+.welcome {
+  background-color: var(--ligthgreen-color);
+}
+.welcome__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.leafs__img {
+  padding: 62px 224px 62px 0;
+}
+.green-color{
+  color: var(--green-color);
+}
+.welcome__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 50px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 42px;
+}
+.welcome__subtitle {
+  font-size: 20px;
+  line-height: 35px;
+  margin-bottom: 62px;
+}
+.welcome__info {
+  padding: 98px 0 98px 0;
+}
+
+.learn-more__button {
+  cursor: pointer;
+  font-family: "Inter";
+  width: 158px;
+  height: 44px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: var(--ligthgreen-color);
+  border: 2px solid var(--orange-color);
+  border-radius: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.15s ease-in-out;
+}
+.learn-more__button:hover,
+.learn-more__button:focus,
+.learn-more__button:active {
+  background-color: var(--orange-color);
+  color: #fff;
+}
+
+//welcome end//
+
+//About-subtitle start//
+.about {
+  background-color: #fff;
+}
+
+.about__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about__title {
+  width: 463px;
+  height: 102px;
+  margin-bottom: 40px;
+  color: var(--green-color);
+  font-size: 40px;
+  line-height: 52px;
+  
+}
+.about {
+  font-size: 20px;
+  line-height: 30px;
+}
+.about__info {
+  width: 605px;
+  height: 350px;
+  padding: 161px 0 155px 0;
+}
+.houseplant__img {
+  padding: 93px 0 94px 0;
+}
+.orange-color {
+  color: var(--orange-color);
+}
+
+//About end//
+
+//service start//
+.service__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.service-functions{
+  display: flex;
+  margin-bottom: 90px;
+}
+.service {
+  padding-bottom: 121px;
+  background-color: var(--ligthgreen-color);
+}
+.service-title {
+  width: 306px;
+  height: 94px;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--green-color);
+  padding-top: 40px;
+}
+.service__buttons {
+  display: flex;
+  padding: 69px 0 0 142px;
+}
+.service__button {
+  cursor: pointer;
+  font-family: "Inika";
+  margin-right: 38px;
+  background-color: var(--ligthgreen-color);
+  color: var(--orange-color);
+  font-size: 20px;
+  line-height: 26px;
+  width: 161px;
+  height: 50px;
+  border: 1px solid var(--orange-color);
+  border-radius: 5px;
+  transition: all 0.15s ease-in-out;
+}
+.service__button:hover, .service__button:focus, .service__button:active{
+  background: var(--orange-color);
+  color: #fff;
+}
+.card-pic {
+  height: 350px;
+}
+.card__text {
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #E3E1D5;
+  border-radius: 0px 0px 20px 20px;
+}
+.service__cards {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 55px 116px;
+}
+
+.card__title {
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--orange-color);
+}
+.card__subtitle {
+  margin-bottom: 36px;
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 20px;
+}
+//service end//
+
+//prices start//
+.prices{
+  height: 560px;
+}
+.prices__wrapper{
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.prices__title{
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.prices__contact{
+  margin-top: 40px;
+  justify-content: flex-end;
+  text-align: right;
+}
+.contact__title{
+  margin-bottom: 38px;
+  width: 452px;
+  height: 103px;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+}
+.prices__button{
+  cursor: pointer;
+  margin-bottom: 39px;
+  box-sizing: border-box;
+  width: 162px;
+  height: 50px;
+  border: 1px solid var(--orange-color);
+  background-color: #fff;
+  border-radius: 5px;
+  font-family: 'Inika';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--orange-color);
+  transition: all 0.15s ease-in-out;
+}
+.prices__button:hover, .prices__button:focus, .prices__button:active{
+  color: #fff;
+  background-color: var(--orange-color);
+
+}
+
+.prices__list{
+  display: block;
+  justify-content: space-between;
+  padding: 34px 41px;
+  width: 332px;
+  height: 282px;
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+}
+.prices__item{
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 20px;
+  padding: 16px 40px;
+  line-height: 20px;
+  background: var(--ligthgreen-color);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.burger__pic img{
+  vertical-align: middle;
+}
+
+
+//prices end//
+
+//contacts start//
+.contacts{
+  background-color: var(--ligthgreen-color);
+}
+.contacts__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+.woman__pic img{
+  vertical-align: bottom;
+  padding-top: 53px;
+}
+.contacts__title{
+  font-family: 'Inika';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--green-color);
+  margin-top: 60px;
+}
+.city__item{
+  display: flex;
+  margin-top: 135px;
+  padding: 0 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  height: 50px;
+  background: #D6E7D2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
+}
+.city__burger{
+  font-family: 'Inter';
+  font-size: 20px;
+  line-height: 40px;
+  color: #717171;
+  letter-spacing: 0.05em;
+}
+//contacts end//
+
+//footer start//
+.footer {
+  padding: 40px 0 40px 0;
+}
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.left__footer__list {
+  font-size: 20px;
+  line-height: 50px;
+  display: flex;
+}
+.right__footer__list {
+  display: flex;
+}
+.left__footer__item {
+  margin-right: 20px;
+}
+.right__footer__item {
+  margin-right: 20px;
+}
+.right__footer__item:last-child {
+  margin-right: 0;
+}
+.left__footer__link {
+  text-decoration: none;
+  color: #000000;
+}
+.left__footer__item:first-child img {
+  vertical-align: middle;
+}
+.rs__link{
+  text-decoration: none;
+  font-family: 'Inter';
+  font-size: 20px;
+  line-height: 50px;
+
+
+
+color: #000000
+}
+//footer end//
