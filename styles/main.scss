@@ -164,12 +164,15 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
-:root{
-  --main-color:#636060;
+:root {
+  --main-color: #636060;
   --green-color: #499a18;
   --ligthgreen-color: #edf2ec;
   --orange-color: #e06733;
+  --text-light-gray: #717171;
+  --nav-links-black: #010201;
 }
 
 body {
@@ -180,6 +183,9 @@ body {
   line-height: 1.2;
   color: var(--main-color);
 }
+a {
+  text-decoration: none;
+}
 
 //Header start//
 .header {
@@ -187,8 +193,9 @@ body {
   background-color: var(--ligthgreen-color);
 }
 .wrapper {
-  max-width: 1222px;
+  max-width: 1440px;
   margin: 0 auto;
+  padding: 0 109px;
 }
 
 .header__wrapper {
@@ -197,14 +204,24 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 452px;
+  height: 47px;
+}
 .header__list {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   text-decoration: none;
 }
 .header__item {
   margin-right: 46px;
+  font-size: 16px;
+
+  line-height: 50px;
+  color: #010201;
 }
 
 .header__item:last-child {
@@ -212,9 +229,35 @@ body {
 }
 
 .header__logo-link {
+  margin-left: 0.47px;
   text-decoration: none;
   font-size: 16px;
   line-height: 21px;
+  color: #000000;
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+}
+.header__logo-link img {
+  margin-right: 1.05px;
+}
+.header__logo {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo__plants {
+  bottom: 5.5px;
+  left: 23px;
+  position: absolute;
+  width: 56.53px;
+  height: 17px;
+  font-family: "Inika";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+
   color: #000000;
 }
 .header__link {
@@ -229,6 +272,12 @@ body {
   font-weight: 700;
   color: var(--orange-color);
 }
+.burger-menu {
+  display: none;
+}
+.header-mobile-nav__list {
+  display: none;
+}
 //Header end//
 
 //welcome start//
@@ -238,27 +287,34 @@ body {
 .welcome__wrapper {
   display: flex;
   justify-content: space-between;
+  height: 532px;
 }
 .leafs__img {
-  padding: 62px 224px 62px 0;
+  padding: 62px 0;
 }
-.green-color{
+.green-color {
   color: var(--green-color);
 }
 .welcome__title {
   font-weight: 700;
   font-size: 45px;
   line-height: 50px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 42px;
+  color: #717171;
 }
 .welcome__subtitle {
+  font-family: "Inter";
+  font-style: normal;
   font-size: 20px;
   line-height: 35px;
   margin-bottom: 62px;
 }
 .welcome__info {
+  display: block;
   padding: 98px 0 98px 0;
+  max-width: 549px;
+  max-height: 340px;
+  justify-content: space-between;
 }
 
 .learn-more__button {
@@ -272,7 +328,6 @@ body {
   background-color: var(--ligthgreen-color);
   border: 2px solid var(--orange-color);
   border-radius: 10px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   transition: all 0.15s ease-in-out;
 }
 .learn-more__button:hover,
@@ -301,16 +356,25 @@ body {
   color: var(--green-color);
   font-size: 40px;
   line-height: 52px;
-  
+}
+.about-subtitle {
+  width: 605px;
+  height: 208px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 }
 .about {
   font-size: 20px;
   line-height: 30px;
 }
 .about__info {
-  width: 605px;
+  display: block;
   height: 350px;
-  padding: 161px 0 155px 0;
+
+  padding: 161px 0 0 0;
 }
 .houseplant__img {
   padding: 93px 0 94px 0;
@@ -326,7 +390,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.service-functions{
+.service-functions {
   display: flex;
   margin-bottom: 90px;
 }
@@ -336,11 +400,10 @@ body {
 }
 .service-title {
   width: 306px;
-  height: 94px;
+  margin-top: 40px;
   font-size: 40px;
   line-height: 52px;
   color: var(--green-color);
-  padding-top: 40px;
 }
 .service__buttons {
   display: flex;
@@ -360,7 +423,9 @@ body {
   border-radius: 5px;
   transition: all 0.15s ease-in-out;
 }
-.service__button:hover, .service__button:focus, .service__button:active{
+.service__button:hover,
+.service__button:focus,
+.service__button:active {
   background: var(--orange-color);
   color: #fff;
 }
@@ -370,17 +435,18 @@ body {
 .card__text {
   text-align: center;
   box-sizing: border-box;
-  border: 1px solid #E3E1D5;
+  border: 1px solid #e3e1d5;
   border-radius: 0px 0px 20px 20px;
 }
 .service__cards {
-  
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 55px 116px;
 }
 
 .card__title {
+  font-family: "Inter";
   margin: 10px 0;
   font-weight: 700;
   font-size: 20px;
@@ -389,46 +455,46 @@ body {
 }
 .card__subtitle {
   margin-bottom: 36px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 16px;
   line-height: 20px;
 }
+
 //service end//
 
 //prices start//
-.prices{
-  height: 560px;
-}
-.prices__wrapper{
-  display: flex;
+.prices__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.prices__title{
-  font-family: 'Inter';
+.prices__title {
+  font-family: "Inter";
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
   margin-top: 40px;
   margin-bottom: 60px;
+  color: #000000;
 }
-.prices__contact{
+.prices__contact {
   margin-top: 40px;
+  margin-bottom: 115px;
   justify-content: flex-end;
   text-align: right;
 }
-.contact__title{
+.contact__title {
   margin-bottom: 38px;
   width: 452px;
   height: 103px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 700;
   font-size: 40px;
   line-height: 50px;
+  color: #000000;
 }
-.prices__button{
+.prices__button {
   cursor: pointer;
   margin-bottom: 39px;
   box-sizing: border-box;
@@ -437,30 +503,31 @@ body {
   border: 1px solid var(--orange-color);
   background-color: #fff;
   border-radius: 5px;
-  font-family: 'Inika';
+  font-family: "Inika";
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   color: var(--orange-color);
   transition: all 0.15s ease-in-out;
 }
-.prices__button:hover, .prices__button:focus, .prices__button:active{
+.prices__img .prices__button:hover,
+.prices__button:focus,
+.prices__button:active {
   color: #fff;
   background-color: var(--orange-color);
-
 }
 
-.prices__list{
+.prices__list {
   display: block;
   justify-content: space-between;
   padding: 34px 41px;
   width: 332px;
   height: 282px;
-  border: 1px solid #E3E1D5;
+  border: 1px solid #e3e1d5;
   border-radius: 20px;
 }
-.prices__item{
-  font-family: 'Inter';
+.prices__item {
+  font-family: "Inter";
   font-weight: 700;
   font-size: 20px;
   padding: 16px 40px;
@@ -471,49 +538,47 @@ body {
   justify-content: space-between;
   margin-bottom: 32px;
 }
-.burger__pic img{
+.burger__pic img {
   vertical-align: middle;
 }
-
 
 //prices end//
 
 //contacts start//
-.contacts{
+.contacts {
   background-color: var(--ligthgreen-color);
 }
-.contacts__wrapper{
+.contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  display: flex;
 }
-.woman__pic img{
+.woman__pic img {
   vertical-align: bottom;
   padding-top: 53px;
 }
-.contacts__title{
-  font-family: 'Inika';
+.contacts__title {
+  font-family: "Inika";
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   color: var(--green-color);
   margin-top: 60px;
 }
-.city__item{
+.city__item {
   display: flex;
   margin-top: 135px;
-  padding: 0 30px;
+  padding: 5px 35px 5px 20px;
   justify-content: space-between;
   align-items: center;
   width: 450px;
   height: 50px;
-  background: #D6E7D2;
+  background: #d6e7d2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
 }
-.city__burger{
-  font-family: 'Inter';
+.city__burger {
+  font-family: "Inter";
   font-size: 20px;
   line-height: 40px;
   color: #717171;
@@ -543,6 +608,9 @@ body {
 .left__footer__item {
   margin-right: 20px;
 }
+.left__footer__item:last-child {
+  margin-right: 0;
+}
 .right__footer__item {
   margin-right: 20px;
 }
@@ -556,14 +624,677 @@ body {
 .left__footer__item:first-child img {
   vertical-align: middle;
 }
-.rs__link{
+.rs__link {
   text-decoration: none;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 20px;
   line-height: 50px;
 
-
-
-color: #000000
+  color: #000000;
 }
 //footer end//
+
+//Media start//
+
+@media screen and(max-width: 1350px) {
+  .welcome__wrapper {
+    height: 490px;
+  }
+
+  .service__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .service__cards {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 44px 106px;
+  }
+  .welcome__subtitle {
+    font-size: 20px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+  }
+  .welcome__info {
+    padding: 40px 0;
+    max-width: 449px;
+    max-height: 340px;
+    justify-content: space-between;
+  }
+  .leafs__img img {
+    max-width: 280px;
+    max-height: 254px;
+    padding-right: 20px;
+  }
+  .service-functions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .service__buttons {
+    padding: 0;
+  }
+  .service-title {
+    width: 306px;
+    height: 94px;
+    font-size: 40px;
+    line-height: 52px;
+    color: var(--green-color);
+  }
+  .service-info {
+    padding: 60px 0 40px 0;
+  }
+  .about__info {
+    padding: 50px;
+  }
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .woman__pic {
+    order: 3;
+    margin-top: 250px;
+    margin-left: 20px;
+  }
+  .woman__pic img {
+    padding-top: 0;
+    vertical-align: bottom;
+    width: 200px;
+    height: 248.49px;
+  }
+  .contacts__title {
+    margin-top: 40px;
+  }
+  .city__item {
+    margin-top: 100px;
+  }
+}
+@media screen and(max-width: 1000px) {
+  .wrapper {
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .contact__title {
+    order: 1;
+    margin-bottom: 21.59px;
+    margin-top: 139px;
+    width: 296px;
+    height: 77.41px;
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .prices__contact {
+    margin-top: 0;
+    margin-bottom: 83px;
+  }
+}
+@media screen and(max-width: 920px) {
+  .welcome__title {
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  .welcome__subtitle {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .leafs__img {
+    padding: 40px 0 82px 0;
+  }
+  .learn-more__button {
+    margin-bottom: 30px;
+  }
+  .houseplant__img img {
+    width: 250px;
+    height: 258px;
+  }
+  .houseplant__img {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 95px 0;
+  }
+  .about__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about__info {
+    padding: 0;
+  }
+  .about__title {
+    margin: 40px auto;
+    width: 423px;
+    font-size: 35px;
+    line-height: 46px;
+    text-align: center;
+  }
+  .about-subtitle {
+    margin-bottom: 40px;
+    width: 668px;
+    height: 208px;
+  }
+
+  .service__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .service__card {
+    width: 279px;
+  }
+
+  .service-card__image {
+    width: 279px;
+    height: 350px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .service__cards {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 38px 106px;
+  }
+  .service-title {
+    margin-top: 0;
+    width: 306px;
+    height: 94px;
+    font-size: 35px;
+    line-height: 46px;
+    width: 306px;
+    height: 94px;
+  }
+  .service-info {
+    margin-bottom: 0;
+  }
+  .service-functions {
+    margin-bottom: 40px;
+  }
+  .card__subtitle {
+    margin: 11px auto 18px auto;
+    width: 201px;
+    height: 40px;
+  }
+  .card__title {
+    margin: 10px auto 10px auto;
+  }
+}
+@media screen and(max-width: 768px) {
+  .wrapper {
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  .welcome__wrapper {
+    height: 420px;
+    flex-direction: row-reverse;
+  }
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 452px;
+    height: 47px;
+  }
+  .header__item {
+    margin-right: 46px;
+    height: 47px;
+  }
+  .header__list {
+    height: 47px;
+  }
+  .welcome__info {
+    padding: 0;
+    width: 346px;
+    height: 310px;
+  }
+  .leafs__img img {
+    transform: scale(1.026);
+    width: 280px;
+    height: 254px;
+    padding-right: 0;
+  }
+  .header {
+    padding: 35px 0;
+  }
+  .welcome__title {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 35px;
+    height: 101px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .welcome__subtitle {
+    margin-left: 5px;
+    width: 315px;
+    height: 105px;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+  }
+  .learn-more__button {
+    margin-bottom: 0px;
+  }
+  .service {
+    padding-bottom: 70px;
+  }
+  .service__button {
+    margin-right: 38px;
+  }
+  .service__button:last-child {
+    margin-right: 0px;
+  }
+  .prices__title {
+    margin-top: 37px;
+    padding-left: 14px;
+    font-size: 35px;
+    line-height: 42px;
+    margin-bottom: 57px;
+  }
+
+  .prices__button {
+    margin-bottom: 34px;
+  }
+  .prices__list {
+    margin-bottom: 164px;
+  }
+  .prices__contact {
+    margin-top: -2px;
+  }
+  .prices_img img {
+    width: 152px;
+    height: 174.99px;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer {
+    padding: 0;
+  }
+  .left__footer__list {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 33px;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    height: 29px;
+    align-items: start;
+  }
+
+  .rs__link {
+    margin-top: 12px;
+    width: 210px;
+    height: 24px;
+    margin-bottom: 16px;
+    line-height: 24px;
+  }
+  .right__footer__list {
+    width: 188px;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+}
+@media screen and(max-width: 760px) {
+  .header__wrapper {
+    height: 24px;
+  }
+  .header {
+    padding: 36px 0;
+  }
+  .wrapper {
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .leafs__img {
+    display: none;
+  }
+  .service__wrapper {
+    justify-content: center;
+  }
+  .welcome__wrapper {
+    height: 300px;
+    flex-direction: row;
+  }
+  .welcome__info {
+    display: block;
+  }
+  .welcome__subtitle {
+    margin-left: 0;
+  }
+  .welcome__title {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 35px;
+    height: 101px;
+    margin: 24px 0 15px 0;
+  }
+  // .service__card {
+  //   width: 280px;
+  // }
+
+  // .service-card__image {
+  //   width: 280px;
+  //   height: 350px;
+  //   border-radius: 20px 20px 0px 0px;
+  .service__cards {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 34px;
+  }
+  // .service-title {
+  //   font-size: 35px;
+  //   line-height: 46px;
+  //   width: 306px;
+  //   height: 94px;
+  // }
+  // .service-info {
+  //   margin-bottom: 0;
+  // }
+  // .service-functions {
+  //   margin-bottom: 40px;
+  // }
+  // .card__subtitle {
+  //   margin: 11px auto 18px auto;
+  //   width: 201px;
+  //   height: 40px;
+  // }
+  // .card__title {
+  //   margin: 10px auto 10px auto;
+  // }
+  .service {
+    padding-bottom: 27px;
+  }
+  .about__title {
+    margin: 20px auto;
+  }
+  .about-subtitle {
+    width: auto;
+    height: 228px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .about__info {
+    height: 307.67px;
+  }
+  .houseplant__img {
+    padding: 0;
+    margin-bottom: 31px;
+  }
+  .houseplant__img img {
+    width: 150px;
+    height: 147px;
+  }
+}
+@media screen and(max-width: 707px) {
+  .prices__wrapper {
+    justify-content: center;
+  }
+  .prices__title {
+    text-align: center;
+    padding: 0;
+    margin: 25px auto 40px auto;
+  }
+  .prices__list {
+    margin-bottom: 19px;
+  }
+  .contact__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+  .prices__contact {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .prices__button {
+    order: 2;
+    //     position: relative;
+    // left: -25%;
+    align-self: center;
+    margin-bottom: 0;
+  }
+  .prices_img {
+    display: none;
+  }
+}
+@media screen and(max-width: 650px) {
+  .header__nav {
+    display: none;
+  }
+  .burger-menu {
+    z-index: 2;
+    display: block;
+    align-self: center;
+    width: 40px;
+    cursor: pointer;
+    transform: translateY(-2px);
+  }
+  .burger-menu__bar,
+  .burger-menu::after,
+  .burger-menu::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--text-light-gray);
+    margin: 5px 0;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .burger-menu--active {
+    position: fixed;
+    right: 50px;
+  }
+
+  .burger-menu--active .burger-menu__bar {
+    opacity: 0;
+  }
+
+  .burger-menu--active::before {
+    transform: rotate(-45deg) translate(-8.5px, 7px);
+  }
+
+  .burger-menu--active::after {
+    transform: rotate(45deg) translate(-8.5px, -7px);
+  }
+  .header-mobile-nav__list {
+    z-index: 1;
+    position: fixed;
+    top: -70%;
+    right: 0;
+    display: block;
+    width: 40%;
+    height: 420px;
+    padding: 100px 20px 20px 50px;
+    border-radius: 0 0 0 60px;
+    background-color: rgba(208, 216, 181, 0.92);
+    transition: all 0.25s ease-in-out;
+  }
+
+  .header-mobile-nav__list--active {
+    top: 0;
+  }
+
+  .header-mobile-nav__link {
+    font-family: "Inika";
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--nav-links-black);
+    transition: color, 0.2s linear;
+  }
+
+  .header-mobile-nav__link:hover {
+    font-weight: 700;
+    color: var(--orange-color);
+  }
+
+  .burger-menu--active {
+    right: 25px;
+  }
+
+  .header-mobile-nav__list {
+    right: 0;
+    width: 60%;
+  }
+
+  .header-mobile-nav__list--active {
+    right: 0;
+  }
+}
+@media screen and(max-width: 585px) {
+  .wrapper {
+    padding: 0 25px;
+  }
+  .welcome__title {
+    width: auto;
+    height: 72px;
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 20.36px;
+  }
+  .welcome__subtitle {
+    margin-bottom: 20.08px;
+  }
+  .learn-more__button {
+    width: 100px;
+    height: 34.14px;
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .about__title {
+    width: 288px;
+    height: 57.74px;
+    margin: 30px auto 21.55px auto;
+    font-size: 25px;
+    line-height: 33px;
+  }
+  .about-subtitle {
+    margin-bottom: 0;
+  }
+  .houseplant__img {
+    padding-top: 30px;
+  }
+  .service-info {
+    padding: 30px 0 35px 0;
+  }
+  .service-title {
+    width: 187px;
+    height: 69px;
+    font-size: 25px;
+    line-height: 33px;
+  }
+  .service__buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .service__button {
+    margin-bottom: 9px;
+    width: 121px;
+    height: 35px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .service__button:last-child {
+    margin-bottom: 0;
+  }
+
+  .city__item {
+    margin-top: 135px;
+    padding: 5px 35px 5px 20px;
+    width: 300px;
+    height: 50px;
+  }
+  @media screen and(max-width: 381px) {
+    body {
+      min-width: 380px;
+    }
+    .prices__title {
+      width: 90px;
+      height: 27px;
+      font-size: 25px;
+      line-height: 30px;
+    }
+    .prices__list {
+      padding: 29px 22px;
+      width: 224px;
+      height: 235px;
+    }
+    .prices__item {
+      width: 180px;
+      font-size: 15px;
+      line-height: 20px;
+      padding: 15.91px 40px 14.92px 30px;
+      margin-bottom: 13.92px;
+    }
+    .service__button {
+      margin-right: 10px;
+    }
+    .contact__title {
+      width: 230px;
+      font-size: 20px;
+    }
+    .prices__button {
+      width: 121px;
+      height: 35px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+    .contacts__title {
+      margin-top: 25px;
+      font-size: 25px;
+      line-height: 33px;
+    }
+    .city__item {
+      padding-right: 20px;
+      margin-top: 80px;
+    }
+    .woman__pic {
+      margin: 0;
+    }
+    .woman__pic img {
+      width: 100px;
+      height: 124.25px;
+      margin-top: 132px;
+    }
+    .left__footer__list {
+      margin-top: 22px;
+    }
+    .right__footer__list {
+      width: 188px;
+      height: 32px;
+    }
+    .card-text {
+    }
+  }
+  // @media screen and(max-width: 365px){
+  //   // .welcome__subtitle{
+  //   //   width: auto;
+  //   //   height: auto;
+  //   // }
+  //   // .welcome__title{
+  //   //   width: auto;
+  //   //   height: auto;
+  //   // }
+  //   // .about-subtitle{
+  //   //   margin-bottom: 10px;
+  //   // }
+  //   body{
+  //     min-width: 380px;
+  //   }
+
+  // }
+}
+//Meadia end//

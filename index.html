@@ -7,6 +7,7 @@
     <title>Plants</title>
     <link rel="stylesheet" href="styles/main.css" />
     <link type="image/x-icon" href="./img/svg/favicon.svg" rel="shortcut icon" />
+    <!-- <script src="/scripts.js"></script> -->
   </head>
   <body>
     <header class="header">
@@ -14,8 +15,9 @@
         <div class="header__wrapper">
           <div class="header__logo">
             <a href="/" class="header__logo-link">
-              <img src="./img/svg/logo_vector.svg" alt="Plants" />Plants
+              <img src="./img/svg/logo_vector.svg" alt="Plants" />
             </a>
+            <h3 class="logo__plants">Plants</h3>
           </div>
           <nav class="header__nav" id="menu">
             <ul class="header__list">
@@ -36,6 +38,35 @@
               </li>
             </ul>
           </nav>
+          <span class="burger-menu">
+            <div class="burger-menu__bar"></div>
+            <div class="burger-menu__bar"></div>
+          </span>
+          <ul class="header-mobile-nav__list">
+            <li class="header-mobile-nav__item">
+              <a href="#" class="header-mobile-nav__link">Home</a>
+            </li>
+            <li class="header-mobile-nav__item">
+              <a href="#ex2" class="header-mobile-nav__link"
+                >About us</a
+              >
+            </li>
+            <li class="header-mobile-nav__item">
+              <a href="#ex3" class="header-mobile-nav__link"
+                >Service</a
+              >
+            </li>
+            <li class="header-mobile-nav__item">
+              <a href="#ex4" class="header-mobile-nav__link"
+                >Price</a
+              >
+            </li>
+            <li class="header-mobile-nav__item">
+              <a href="#section-contacts" class="header-mobile-nav__link"
+                >Contacts</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </header>
@@ -91,7 +122,21 @@
           <div class="service__cards">
             <div class="service__card">
               <div class="card-pic">
-                <img src="./img/card_1.png" alt="Garden care" />
+                <picture>
+                  <source
+                       media="(max-width: 920px)"
+                       srcset="./img/card_1_768px.jpg"
+                  />
+                  <source
+                       media="(min-width: 769px)"
+                       srcset="./img/card_1.png"
+                  />
+                  <img
+                        class="service-card__image"
+                        src="./img/card_1.png"
+                         alt="garden care service image"
+                  />
+                   </picture> 
               </div>
               <div class="card__text">
                 <div class="card__title">Garden care</div>
@@ -100,7 +145,21 @@
             </div>
             <div class="service__card">
               <div class="card-pic">
-                <img src="./img/card_2.png" alt="Planting" />
+                <picture>
+                  <source
+                       media="(max-width: 920px)"
+                       srcset="./img/card_2_768px.jpg"
+                  />
+                  <source
+                       media="(min-width: 769px)"
+                       srcset="./img/card_2.png"
+                  />
+                  <img
+                        class="service-card__image"
+                        src="./img/card_2.png"
+                         alt="garden care service image"
+                  />
+                   </picture> 
               </div>
               <div class="card__text">
                 <div class="card__title">Planting</div>
@@ -109,7 +168,21 @@
             </div>
             <div class="service__card">
               <div class="card-pic">
-                <img src="./img/card_3.png" alt="Lawn care" />
+                <picture>
+                  <source
+                       media="(max-width: 920px)"
+                       srcset="./img/card_3_768px.jpg"
+                  />
+                  <source
+                       media="(min-width: 769px)"
+                       srcset="./img/card_3.png"
+                  />
+                  <img
+                        class="service-card__image"
+                        src="./img/card_3.png"
+                         alt="garden care service image"
+                  />
+                   </picture> 
               </div>
               <div class="card__text">
                 <div class="card__title">Lawn care</div>
@@ -118,7 +191,21 @@
             </div>
             <div class="service__card">
               <div class="card-pic">
-                <img src="./img/card_4.png" alt="Planting" />
+                <picture>
+                  <source
+                       media="(max-width: 920px)"
+                       srcset="./img/card_4_768px.jpg"
+                  />
+                  <source
+                       media="(min-width: 769px)"
+                       srcset="./img/card_4.png"
+                  />
+                  <img
+                        class="service-card__image"
+                        src="./img/card_4.png"
+                         alt="garden care service image"
+                  />
+                   </picture> 
               </div>
               <div class="card__text">
                 <div class="card__title">Planting</div>
@@ -127,7 +214,21 @@
             </div>
             <div class="service__card">
               <div class="card-pic">
-                <img src="./img/card_5.png" alt="Garden care" />
+                <picture>
+                  <source
+                       media="(max-width: 920px)"
+                       srcset="./img/card_5_768px.jpg"
+                  />
+                  <source
+                       media="(min-width: 769px)"
+                       srcset="./img/card_5.png"
+                  />
+                  <img
+                        class="service-card__image"
+                        src="./img/card_5.png"
+                         alt="garden care service image"
+                  />
+                   </picture> 
               </div>
               <div class="card__text">
                 <div class="card__title">Garden care</div>
@@ -136,7 +237,21 @@
             </div>
             <div class="service__card">
               <div class="card-pic">
-                <img src="./img/card_6.png" alt="Planting" />
+                <picture>
+                  <source
+                       media="(max-width: 920px)"
+                       srcset="./img/card_6_768px.jpg"
+                  />
+                  <source
+                       media="(min-width: 769px)"
+                       srcset="./img/card_6.png"
+                  />
+                  <img
+                        class="service-card__image"
+                        src="./img/card_6.png"
+                         alt="garden care service image"
+                  />
+                   </picture> 
               </div>
               <div class="card__text">
                 <div class="card__title">Planting</div>
@@ -242,6 +357,6 @@
         </ul>
       </div>
     </footer>
-    <script src="/scripts.js"></script>
   </body>
+  <script src="./scripts/burger.js"></script>
 </html>
